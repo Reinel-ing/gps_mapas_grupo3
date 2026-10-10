@@ -4,7 +4,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../core/constants/constantes_mapa.dart';
 
-/// Mapa de Google (google_maps_flutter) con el marcador "Estás aquí".
 class MapaUbicacion extends StatefulWidget {
   const MapaUbicacion({super.key, required this.posicion});
 
@@ -15,9 +14,8 @@ class MapaUbicacion extends StatefulWidget {
 }
 
 class _MapaUbicacionState extends State<MapaUbicacion> {
-  GoogleMapController? _controlador; // Controla la cámara del mapa
+  GoogleMapController? _controlador;
 
-  /// Cada vez que llega una posición nueva, la cámara se mueve hasta ella.
   @override
   void didUpdateWidget(covariant MapaUbicacion anterior) {
     super.didUpdateWidget(anterior);

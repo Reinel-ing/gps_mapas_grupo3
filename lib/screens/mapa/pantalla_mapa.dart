@@ -8,7 +8,6 @@ import '../../services/servicio_ubicacion.dart';
 import '../../widgets/mapa_ubicacion.dart';
 import '../../widgets/panel_ubicacion.dart';
 
-/// Pantalla principal: mapa arriba, datos y botones abajo.
 class PantallaMapa extends StatefulWidget {
   const PantallaMapa({super.key});
 
@@ -18,13 +17,11 @@ class PantallaMapa extends StatefulWidget {
 
 class _PantallaMapaState extends State<PantallaMapa> {
   final _servicio = ServicioUbicacion();
-  Position? _posicion; // Última posición recibida
-  StreamSubscription<Position>? _seguimiento; // null = no estamos siguiendo
+  Position? _posicion;
+  StreamSubscription<Position>? _seguimiento;
   EstadoPermiso? _estadoPermiso;
   String _mensaje = 'Toca "Obtener ubicación" para empezar';
 
-  /// Revisa permisos y muestra un mensaje claro si algo falla.
-  /// Devuelve true solo si podemos usar el GPS.
   Future<bool> _puedeUsarGps() async {
     final estado = await _servicio.verificarPermisos();
     setState(() {
@@ -34,19 +31,16 @@ class _PantallaMapaState extends State<PantallaMapa> {
     return estado == EstadoPermiso.concedido;
   }
 
-  /// Botón "Obtener ubicación": una sola lectura del GPS.
   Future<void> _obtenerUbicacion() async {
     if (!await _puedeUsarGps()) return;
     setState(() => _mensaje = 'Buscando señal GPS...');
     try {
       _actualizar(await _servicio.obtenerPosicion());
     } catch (e) {
-      // Manejo de errores: sin señal, tiempo agotado, etc. La app no se cierra.
       setState(() => _mensaje = 'No se pudo obtener la ubicación: $e');
     }
   }
 
-  /// Botón "Seguir en vivo" / "Detener".
   Future<void> _alternarSeguimiento() async {
     if (_seguimiento != null) {
       await _seguimiento!.cancel();
@@ -66,7 +60,6 @@ class _PantallaMapaState extends State<PantallaMapa> {
     });
   }
 
-  /// Guarda la posición nueva; el mapa se mueve solo hasta ella.
   void _actualizar(Position pos) {
     setState(() {
       _posicion = pos;
@@ -76,7 +69,7 @@ class _PantallaMapaState extends State<PantallaMapa> {
 
   @override
   void dispose() {
-    _seguimiento?.cancel(); // Liberar el GPS al salir para no gastar batería
+    _seguimiento?.cancel();
     super.dispose();
   }
 

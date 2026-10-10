@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Tema visual de la app.
 class AppTheme {
   AppTheme._();
 

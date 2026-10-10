@@ -1,11 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- ===== PERMISOS DE UBICACION ===== -->
-    <!-- Ubicacion precisa: usa el chip GPS (pocos metros de error) -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- Ubicacion aproximada: usa WiFi y antenas (cientos de metros) -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- Internet: para descargar el mapa de Google -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -34,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!-- Clave de Google Maps: llega desde claves.json al ejecutar la app -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />

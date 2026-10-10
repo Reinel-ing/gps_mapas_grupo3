@@ -4,7 +4,6 @@ import 'package:geolocator/geolocator.dart';
 
 import '../models/estado_permiso.dart';
 
-/// Panel inferior: coordenadas, mensaje de estado y botones.
 class PanelUbicacion extends StatelessWidget {
   const PanelUbicacion({
     super.key,
@@ -63,14 +62,12 @@ class PanelUbicacion extends StatelessWidget {
                 icon: Icon(siguiendo ? Icons.stop : Icons.play_arrow),
                 label: Text(siguiendo ? 'Detener' : 'Seguir en vivo'),
               ),
-              // Solo si el permiso quedó bloqueado (en Web no existe).
               if (estadoPermiso == EstadoPermiso.negadoParaSiempre && !kIsWeb)
                 TextButton.icon(
                   onPressed: onAbrirAjustesApp,
                   icon: const Icon(Icons.settings),
                   label: const Text('Abrir ajustes'),
                 ),
-              // Solo si el GPS del teléfono está apagado.
               if (estadoPermiso == EstadoPermiso.gpsApagado && !kIsWeb)
                 TextButton.icon(
                   onPressed: onAbrirAjustesGps,

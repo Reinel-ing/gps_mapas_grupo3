@@ -6,8 +6,6 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-// Lee la clave de Google Maps que se pasa con: flutter run --dart-define=MAPS_API_KEY=tu_clave
-// Asi la clave no queda escrita en ningun archivo del repositorio.
 val dartDefines: Map<String, String> =
     (project.findProperty("dart-defines") as String?)
         ?.split(",")
@@ -30,7 +28,6 @@ android {
         applicationId = "com.grupo3.gps_mapas"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        // google_maps_flutter necesita Android 7.0 (API 24) o superior
         minSdk = maxOf(flutter.minSdkVersion, 24)
         targetSdk = flutter.targetSdkVersion
         // Uses the version code from pubspec.yaml. When using split APKs, 1000 * ABI_VERSION
@@ -39,7 +36,6 @@ android {
         // flag during build.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        // Pasa la clave al AndroidManifest.xml como ${MAPS_API_KEY}
         manifestPlaceholders["MAPS_API_KEY"] = dartDefines["MAPS_API_KEY"] ?: ""
     }
 
