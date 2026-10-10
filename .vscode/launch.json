@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "GPS y Mapas",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": ["--dart-define-from-file=claves.json"],
+      "env": { "GRADLE_USER_HOME": "${env:USERPROFILE}\\.gradle-gps-grupo3" }
+    }
+  ]
+}

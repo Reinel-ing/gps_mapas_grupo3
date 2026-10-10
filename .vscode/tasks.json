@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar Android (guardar errores)",
+      "type": "process",
+      "command": "cmd.exe",
+      "args": ["/c", "flutter build apk --debug --dart-define-from-file=claves.json > error_build.txt 2>&1"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": { "GRADLE_USER_HOME": "${env:USERPROFILE}\\.gradle-gps-grupo3" }
+      },
+      "problemMatcher": []
+    }
+  ]
+}
