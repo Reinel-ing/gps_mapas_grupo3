@@ -10,9 +10,9 @@ La app obtiene la ubicación del dispositivo con [`geolocator`](https://pub.dev/
 
 | Nombre | Qué explicó en el video |
 |---|---|
-| Kevin Perea | Explicación del tema (qué es el GPS y cómo funciona) y demostración negando el permiso |
+| Kevin Perea | Introducción, explicación del tema (qué es el GPS y cómo funciona) y demostración negando el permiso |
 | Frell Beleño | Permisos en Android, iOS y Web, buenas prácticas y cierre |
-| Reinel Alfaro | Introducción, implementación del código y demostración aceptando el permiso |
+| Reinel Alfaro | Implementación del código, demostración aceptando el permiso y repositorio en GitHub |
 
 ## Funcionalidades
 
