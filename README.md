@@ -10,9 +10,9 @@ La app obtiene la ubicación del dispositivo con [`geolocator`](https://pub.dev/
 
 | Nombre | Qué explicó en el video |
 |---|---|
-| Reinel Alfaro | Introducción, implementación del código y demostración aceptando el permiso |
 | Kevin Perea | Explicación del tema (qué es el GPS y cómo funciona) y demostración negando el permiso |
 | Frell Beleño | Permisos en Android, iOS y Web, buenas prácticas y cierre |
+| Reinel Alfaro | Introducción, implementación del código y demostración aceptando el permiso |
 
 ## Funcionalidades
 
@@ -194,6 +194,6 @@ flutter test
 
 ## Créditos
 
-- Grupo 3: Reinel Alfaro, Kevin Perea y Frell Beleño.
+- Grupo 3: Kevin Perea, Frell Beleño y Reinel Alfaro.
 - Programación Móvil SS603, grupo 04. Universidad Popular del Cesar, 2026.
 - Paquetes: [`geolocator`](https://pub.dev/packages/geolocator) y [`google_maps_flutter`](https://pub.dev/packages/google_maps_flutter).
