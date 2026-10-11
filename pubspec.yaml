@@ -11,9 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  # GPS: ubicacion, permisos y seguimiento en tiempo real
   geolocator: ^14.1.1
-  # Mapa de Google dentro de la app
   google_maps_flutter: ^2.18.2
 
 dev_dependencies:
