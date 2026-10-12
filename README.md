@@ -4,7 +4,7 @@ Video tutorial y app de ejemplo para **Programación Móvil (SS603, grupo 04)** 
 
 La app obtiene la ubicación del dispositivo con [`geolocator`](https://pub.dev/packages/geolocator) y la muestra en un mapa de Google con [`google_maps_flutter`](https://pub.dev/packages/google_maps_flutter). Pide el permiso de ubicación y funciona tanto si el usuario lo acepta como si lo niega.
 
-**Video tutorial:** [Ver en YouTube](ENLACE_DEL_VIDEO)
+**Link del video en YouTube:** [https://youtu.be/e4KxCTPIwPI](https://youtu.be/e4KxCTPIwPI)
 
 ## Integrantes
 
