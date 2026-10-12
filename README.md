@@ -10,7 +10,7 @@ La app obtiene la ubicación del dispositivo con [`geolocator`](https://pub.dev/
 
 | Nombre | Qué explicó en el video |
 |---|---|
-| Frell Beleño | Presentación con diapositivas: introducción, explicación del tema, permisos en Android, iOS y Web, buenas prácticas y cierre |
+| Frell Beleño | Presentación con diapositivas: introducción, explicación del tema, permisos en Android, iOS y Web, buenas prácticas, cierre y enlace del repositorio |
 | Reinel Alfaro | Implementación del código: pubspec.yaml, solicitud del permiso, lógica principal y manejo de errores |
 | Kevin Perea | Demostración de la app: negando y aceptando el permiso de ubicación |
 
